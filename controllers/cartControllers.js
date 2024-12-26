@@ -5,7 +5,6 @@ const Carts = require("../model/Carts");
 const getCartByEmail = async (req, res) => {
   try {
     const email = req.query.email;
-    // console.log(email);
     const query = { email: email };
     const result = await Carts.find(query).exec();
     res.status(200).json(result);
